@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import <AVKit/AVKit.h>
+
+@interface ViewController : UIViewController <AVPlayerViewControllerDelegate>
 
 
 @end

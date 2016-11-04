@@ -1,0 +1,86 @@
+//
+//  PrefixHeader.pch
+//  PDM_iOS
+//
+//  Created by Web Libre Consulting on 23/02/2016.
+//  Copyright © 2016 Web Libre Consulting. All rights reserved.
+//
+
+#ifndef PDM_PrefixHeader_pch
+#define PDM_PrefixHeader_pch
+
+#import <Availability.h>
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_RETINA ([[UIScreen mainScreen] scale] >= 2.0)
+#define IS_ZOOMED ([UIScreen mainScreen].nativeScale < [UIScreen mainScreen].scale)
+
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+
+#define IS_IPHONE_4_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
+#define IS_IPHONE_5 (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
+#define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0 && !IS_ZOOMED)
+#define IS_IPHONE_6_DZ (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0 && IS_ZOOMED)
+#define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0 && !IS_ZOOMED)
+#define IS_IPHONE_6P_DZ (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0 && IS_ZOOMED)
+
+#define PDM_TINT_COLOR [UIColor colorWithRed:57/255.0 green:191/255.0 blue:193/255.0 alpha:1]
+#define PDM_TINT2_COLOR [UIColor colorWithRed:57/255.0 green:191/255.0 blue:193/255.0 alpha:1]
+#define PDM_LIGHT_COLOR [UIColor colorWithRed:230/255.0 green:230/255.0 blue:230/255.0 alpha:1]
+#define PDM_DARK_COLOR [UIColor colorWithRed:63/255.0 green:63/255.0 blue:63/255.0 alpha:1]
+#define PDM_BACKGROUND_COLOR [UIColor whiteColor]
+//#define PDM_BACKGROUND_COLOR [UIColor colorWithRed:242/255.0 green:242/255.0 blue:242/255.0 alpha:1]
+
+#define COMPACT_MODE @"compactMode"
+#define IS_COMPACT [[[NSUserDefaults standardUserDefaults] objectForKey:COMPACT_MODE] boolValue];
+
+#define STORE_IDENTIFIER [[NSUserDefaults standardUserDefaults] objectForKey:@"storeIdentifier"]
+
+//#define PDM_SELECTION_COLOR [UIColor colorWithRed:239/255.0 green:128/255.0 blue:26/255.0 alpha:0.5]
+//#define PDM_TINT_COLOR [UIColor colorWithRed:221/255.0 green:78/255.0 blue:26/255.0 alpha:1]
+//#define PDM_BACKGROUND_COLOR [UIColor colorWithRed:251/255.0 green:228/255.0 blue:203/255.0 alpha:1]
+
+// NSlog is available only when DEBUG is set
+#ifdef DEBUG
+#	define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#	define NSLog(...)
+#endif
+
+// PLog will output like printf only when DEBUG is set
+//#ifdef DEBUG
+//#   define PLog(fmt, ...) fprintf(stderr, "ØØØØ-ØØ-ØØ ØØ:ØØ:ØØ.ØØØ ppp[ØØØ:ØØØ] %s [Line %d]\n" fmt "\n______________________________________________\n", __func__, __LINE__, ##__VA_ARGS__ )
+//#else
+//#   define PLog(...)
+//#endif
+
+// DLog will output like NSLog only when DEBUG is set
+#ifdef DEBUG
+#   define DLog(fmt, ...) NSLog((@"%s [Line %d]\n" fmt @"\n______________________________________________"), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#   define DLog(...)
+#endif
+
+// ALog will always output like NSLog
+#define ALog(fmt, ...) NSLog((@"%s [Line %d]\n" fmt @"\n______________________________________________"), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+
+// ULog will show the UIAlertView only when the DEBUG variable is set
+#ifdef DEBUG
+#   define ULog(fmt, ...)  { [[[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%s\n [Line %d] ", __PRETTY_FUNCTION__, __LINE__] message:[NSString stringWithFormat:fmt, ##__VA_ARGS__]  delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show]; }
+#else
+#   define ULog(...)
+#endif
+
+#endif
