@@ -28,6 +28,8 @@
 		7FA029341DCC01C90031DD19 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0291F1DCC01C90031DD19 /* UIRefreshControl+AFNetworking.m */; };
 		7FA029351DCC01C90031DD19 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA029211DCC01C90031DD19 /* UIWebView+AFNetworking.m */; };
 		7FA029361DCC01C90031DD19 /* WLCTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA029231DCC01C90031DD19 /* WLCTools.m */; };
+		7FA0293A1DCC0C8F0031DD19 /* PoolTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA029391DCC0C8F0031DD19 /* PoolTableViewController.m */; };
+		7FA0293D1DCC12090031DD19 /* RankingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0293C1DCC12090031DD19 /* RankingTableViewCell.m */; };
 		7FDF6CAF1DCB950D009DF624 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDF6CAE1DCB950D009DF624 /* main.m */; };
 		7FDF6CB21DCB950D009DF624 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDF6CB11DCB950D009DF624 /* AppDelegate.m */; };
 		7FDF6CB51DCB950D009DF624 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDF6CB41DCB950D009DF624 /* ViewController.m */; };
@@ -82,6 +84,10 @@
 		7FA029211DCC01C90031DD19 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		7FA029221DCC01C90031DD19 /* WLCTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLCTools.h; sourceTree = "<group>"; };
 		7FA029231DCC01C90031DD19 /* WLCTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLCTools.m; sourceTree = "<group>"; };
+		7FA029381DCC0C8F0031DD19 /* PoolTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PoolTableViewController.h; path = Pool/PoolTableViewController.h; sourceTree = "<group>"; };
+		7FA029391DCC0C8F0031DD19 /* PoolTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PoolTableViewController.m; path = Pool/PoolTableViewController.m; sourceTree = "<group>"; };
+		7FA0293B1DCC12090031DD19 /* RankingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RankingTableViewCell.h; path = Pool/RankingTableViewCell.h; sourceTree = "<group>"; };
+		7FA0293C1DCC12090031DD19 /* RankingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RankingTableViewCell.m; path = Pool/RankingTableViewCell.m; sourceTree = "<group>"; };
 		7FDF6CAA1DCB950D009DF624 /* FMFA7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMFA7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FDF6CAE1DCB950D009DF624 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7FDF6CB01DCB950D009DF624 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -162,6 +168,17 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		7FA029371DCC0C6D0031DD19 /* Pool */ = {
+			isa = PBXGroup;
+			children = (
+				7FA029381DCC0C8F0031DD19 /* PoolTableViewController.h */,
+				7FA029391DCC0C8F0031DD19 /* PoolTableViewController.m */,
+				7FA0293B1DCC12090031DD19 /* RankingTableViewCell.h */,
+				7FA0293C1DCC12090031DD19 /* RankingTableViewCell.m */,
+			);
+			name = Pool;
+			sourceTree = "<group>";
+		};
 		7FDF6CA11DCB950D009DF624 = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +198,7 @@
 		7FDF6CAC1DCB950D009DF624 /* FMFA7 */ = {
 			isa = PBXGroup;
 			children = (
+				7FA029371DCC0C6D0031DD19 /* Pool */,
 				7FDF6CB01DCB950D009DF624 /* AppDelegate.h */,
 				7FDF6CB11DCB950D009DF624 /* AppDelegate.m */,
 				7FDF6CB31DCB950D009DF624 /* ViewController.h */,
@@ -289,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FA0293D1DCC12090031DD19 /* RankingTableViewCell.m in Sources */,
 				7FA0292C1DCC01C90031DD19 /* SWRevealViewController.m in Sources */,
 				7FA029261DCC01C90031DD19 /* AFSecurityPolicy.m in Sources */,
 				7FA029361DCC01C90031DD19 /* WLCTools.m in Sources */,
@@ -310,6 +329,7 @@
 				7FA029301DCC01C90031DD19 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				7FDF6CAF1DCB950D009DF624 /* main.m in Sources */,
 				7FA029251DCC01C90031DD19 /* AFNetworkReachabilityManager.m in Sources */,
+				7FA0293A1DCC0C8F0031DD19 /* PoolTableViewController.m in Sources */,
 				7FDF6CBB1DCB950D009DF624 /* FMFA7.xcdatamodeld in Sources */,
 				7FA029271DCC01C90031DD19 /* AFURLRequestSerialization.m in Sources */,
 			);

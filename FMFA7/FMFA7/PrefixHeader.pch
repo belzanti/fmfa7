@@ -36,11 +36,11 @@
 #define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0 && !IS_ZOOMED)
 #define IS_IPHONE_6P_DZ (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0 && IS_ZOOMED)
 
-#define PDM_TINT_COLOR [UIColor colorWithRed:57/255.0 green:191/255.0 blue:193/255.0 alpha:1]
-#define PDM_TINT2_COLOR [UIColor colorWithRed:57/255.0 green:191/255.0 blue:193/255.0 alpha:1]
-#define PDM_LIGHT_COLOR [UIColor colorWithRed:230/255.0 green:230/255.0 blue:230/255.0 alpha:1]
-#define PDM_DARK_COLOR [UIColor colorWithRed:63/255.0 green:63/255.0 blue:63/255.0 alpha:1]
-#define PDM_BACKGROUND_COLOR [UIColor whiteColor]
+#define TINT_COLOR [UIColor colorWithRed:57/255.0 green:191/255.0 blue:193/255.0 alpha:1]
+#define TINT2_COLOR [UIColor colorWithRed:57/255.0 green:191/255.0 blue:193/255.0 alpha:1]
+#define LIGHT_COLOR [UIColor colorWithRed:230/255.0 green:230/255.0 blue:230/255.0 alpha:1]
+#define DARK_COLOR [UIColor colorWithRed:63/255.0 green:63/255.0 blue:63/255.0 alpha:1]
+#define BACKGROUND_COLOR [UIColor whiteColor]
 //#define PDM_BACKGROUND_COLOR [UIColor colorWithRed:242/255.0 green:242/255.0 blue:242/255.0 alpha:1]
 
 #define COMPACT_MODE @"compactMode"
